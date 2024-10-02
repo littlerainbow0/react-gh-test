@@ -51,9 +51,9 @@ bash
 複製程式碼
 git checkout -b <branch_name>
 <branch_name> 可以是队员的名字或者功能的名称，例如 feature-username 或 fix-bug.
+
 2. 查看当前分支：
 队员可以使用以下命令查看当前所在的分支：
-
 bash
 複製程式碼
 git branch
@@ -66,14 +66,15 @@ bash
 複製程式碼
 git add .
 git commit -m "提交信息"
+
 4. 推送到远程分支：
 完成提交后，队员可以将自己的分支推送到远程仓库。推送新分支的命令如下：
-
 bash
 複製程式碼
 git push -u origin <branch_name>
 <branch_name> 是队员刚创建的分支名称。
 -u 参数会让 Git 记住这个分支与远程的关联，之后该队员可以直接使用 git push 来推送更新。
+
 5. 远程合并请求（Pull Request，PR）：
 当队员完成工作后，他们通常会发起一个合并请求（Pull Request，PR），以便将分支合并到 main 或其他主分支上。具体操作步骤：
 
