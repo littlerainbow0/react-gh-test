@@ -1,1 +1,6 @@
 .gitignore  git忽略掉的檔案 原則上是不需要遷入的檔案
+
+
+
+＃監聽 tailwindcss 的檔案編譯
+npx tailwindcss -i ./src/all.css -o ./dist/css/style.css --watch
