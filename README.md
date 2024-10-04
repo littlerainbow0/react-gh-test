@@ -2,6 +2,7 @@
 
 * 使用VScode開啟資料夾，推薦下載plugin套件: Material Icon Theme
 
+```markdown
 react-gh-test-main
 ├─ ./
 │  .gitignore
@@ -34,11 +35,13 @@ react-gh-test-main
     │  └─scss         .scss:      共用、自訂的scss
     ├─components      .jsx, .css: header, footer等元件
     └─routes          .html:      各個頁面，如首頁、預約、會員登入等
-
+```
 * ./public/
-`此資料夾已經被Vite自動static，理論上/public/會放置靜態資料`
-`可能採坑!!! 使用./public/images/...png，本地端可以正常運作，佈署會出問題`
-`為了大家的路由使用習慣，把靜態檔案放在「.src/assets/靜態資料」`
+```
+此資料夾已經被Vite自動static，理論上/public/會放置靜態資料
+可能採坑!!! 使用./public/images/...png，本地端可以正常運作，佈署會出問題
+為了大家的路由使用習慣，把靜態檔案放在「.src/assets/靜態資料」
+```
 
 ---
 
