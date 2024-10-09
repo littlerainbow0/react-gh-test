@@ -16,7 +16,7 @@ react-gh-test-main
 │  txt.txt
 │  vite.config.js     * 可能會再改這邊的東西
 │
-├─public `已被static`  * 怕踩坑
+├─public `已被static`  * 怕踩坑這裡不要動><
 │      txt.txt
 │      vite.svg
 │
@@ -26,15 +26,16 @@ react-gh-test-main
     │  index.css
     │  main.jsx
     │  txt.txt
-    │
-    ├─assets          靜態資料夾
+    │  車廂svg放這裡
+    │  前台會動的svg放這裡
+    ├─assets          靜態檔案資料夾
     │  │  react.svg
     │  │
     │  └─icons        .svg, .png: 透明底的圖檔
     │  └─images       image/*:    圖檔
     │  └─scss         .scss:      共用、自訂的scss
-    ├─components      .jsx, .css: header, footer等元件
-    └─routes          .html:      各個頁面，如首頁、預約、會員登入等
+    ├─components      .jsx, .css: header, footer, 車廂card等元件
+    └─routes          .jsx:       各個頁面，如首頁、預約、會員登入等
 ```
 * ./public/
 ```
