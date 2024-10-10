@@ -32,7 +32,7 @@ react-gh-test-main
     │  │  react.svg
     │  │
     │  └─icons        .svg, .png: 透明底的圖檔
-    │  └─images       image/*:    圖檔
+    │  └─img       img/*:    圖檔
     │  └─scss         .scss:      共用、自訂的scss
     ├─components      .jsx, .css: header, footer, 車廂card等元件
     └─routes          .jsx:       各個頁面，如首頁、預約、會員登入等
