@@ -27,8 +27,41 @@ export default {
         '3xl':'3.75rem',
       },
     },
-    extend: {},
+    extend: {
+      width:{
+        '135':'540px',
+      },
+      height:{
+        '66':'265px',
+        '125':'500px',
+        '200':'800px',
+      },
+      //字＆字型＆大小
+      fontSize:{
+        'h1':['3rem',{lineHeight:'1.4',letterSpacing:'0.5em'}],
+        'h2':['2rem',{lineHeight:'1.4',letterSpacing:'0.5em'}],
+        'h3':['1.75rem',{lineHeight:'1.3',letterSpacing:'0.1em'}],
+        'h4':['1.5rem',{lineHeight:'1.3',letterSpacing:'0.1em'}],
+        'h5':['1.25rem',{lineHeight:'1.3',letterSpacing:'0.1em'}],
+        'h6':['1.125rem',{lineHeight:'1.3',letterSpacing:'0.1em'}],
+        'p-1':['1rem',{lineHeight:'1.5',letterSpacing:'0.02em'}],
+        'p-2':['0.875rem',{lineHeight:'1.5',letterSpacing:'0.02em'}],
+        'p-3':['0.75rem',{lineHeight:'1.5',letterSpacing:'0.02em'}],
+      },
+      fontFamily:{
+        'titleFont':[ "Noto Serif TC", "serif"], //思源宋體
+        'bodyFont':["Noto Sans TC", 'system-ui'], //思源黑體
+      },
+    },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        '.text-indent-1': {
+          'text-indent': '1rem', // 自定義首行縮排
+        },
+      });
+    },
+  ],
 }
 
