@@ -1,0 +1,63 @@
+@import 'public.scss';
+
+// @import 'reset.scss';
+header {
+    background-image: url('/src/assets/images/train_exterior/train_exterior_8.png.png');
+}
+
+.order {
+    width: 1024px;
+    margin: 28px auto;
+
+    h3 {
+        margin: 28px 0;
+        @extend %h3;
+
+        span {
+            padding-left: 12px;
+        }
+    }
+
+    h5 {
+        border-bottom: 2px solid $gray_800;
+        margin: 28px 0;
+        @extend %h5;
+    }
+
+}
+
+.order_info_section {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap:100px;
+
+    p {
+        width: 350px;
+        display: flex;
+        padding: 12px 0;
+        justify-content: space-between;
+        @extend %body;
+
+    }
+
+    div:last-of-type {
+        height: 200px;
+
+        a{  
+            text-align: center;
+            display: block;
+            width: 150px;
+            height: 50px;
+            background-color: $gray_200;
+            text-decoration: none;
+            color:$gray_800;
+            line-height: 50px;
+            border-radius: 35px;
+            @extend %btn_lg;
+        }
+
+    }
+
+
+}

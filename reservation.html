@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/reservation.css">
+    <title>預約行程</title>
+</head>
+
+<body>
+    <header>
+        <div class="header_logo">
+            <a href="#">
+                <img src="/src/assets/images/icon/LOGO.svg" alt="">
+            </a>
+            <a href="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="M20 22H4v-2a5 5 0 0 1 5-5h6a5 5 0 0 1 5 5zm-8-9a6 6 0 1 1 0-12a6 6 0 0 1 0 12" />
+                </svg>
+            </a>
+        </div>
+
+        <nav class="header_nav">
+            <ul>
+                <li><a href="">首頁</a></li>
+                <li><a href="">概念</a></li>
+                <li><a href="">饗宴</a></li>
+                <li><a href="">設施</a></li>
+                <li><a href="">旅程</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- 上方訂單需求 -->
+    <form action="" class="form_apply">
+        <div>
+            <label for="people">旅客人數：</label>
+            <select name="" id="people">
+                <option value="1">1人</option>
+                <option value="2" selected>2人</option>
+                <option value="3">3人</option>
+                <option value="4">4人</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="car_type">車廂類型：</label>
+            <select name="" id="car_type">
+                <option value="f">景觀車廂Ｆ - 雙人座</option>
+                <option value="e">景觀車廂Ｅ - 四人座</option>
+                <option value="d">景觀車廂Ｄ - 雙人包廂</option>
+                <option value="a">豪華景觀車廂Ａ - VIP 四人席</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="departure_date">出發日期：</label>
+            <input type="date" name="" id="departure_date">
+        </div>
+        
+        <div>
+            <label for="departure_time">出發時間：</label>
+            <select name="" id="departure_time">
+                <option value="14_17" selected>14:00 - 17:00</option>
+                <option value="15_18">15:00 - 18:00</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="route">路線：</label><br>
+            <select name="" id="">
+                <option value="taipei_taichung">台北 ⭢ 台中</option>
+                <option value="taipei_hualien">台北 ⭢ 花蓮</option>
+                <option value="taichung_tainan">台中 ⭢ 台南</option>
+                <option value="taichung_kaohsiung">台中 ⭢ 高雄</option>
+                <option value="kaohsiung_taichung">高雄 ⭢ 台中</option>
+                <option value="kaohsiung_hualien">高雄 ⭢ 花蓮</option>
+            </select>
+            <img src="/src/assets/images/plan/F車：8組雙人桌，1-2人，依人頭計價和點餐.svg" alt="">
+        </div>
+    </form>
+    <!-- 上方應單需求結束 -->
+
+    <!-- 左側訂單內容 -->
+    <div class="order_list">
+        <div class="trip_datail">
+
+            <div>
+                <p>
+                    <sapn>行程</sapn>
+                </p>
+                </p>
+                <div>
+                    <img src="/src/assets/images/train_exterior/tripInfo_train01.png" alt="">
+                    <p>台北⭢台中</p>
+                </div>
+            </div>
+
+            <div>
+                <p>
+                    <span>選擇餐點</span>
+                </p>
+                <div>
+                    <div>
+                        <img src="/src/assets/images/dessert/trip_Jp.png" alt="">
+                        <label for="dessert_jpA_qty">
+                            套餐名稱：舒芙蕾套餐
+                            <br>
+                            套餐內容：舒芙蕾, 抹茶
+                        </label>
+                        <select name="" id="dessert_jpA_qty">
+                            <option value="1" selected>1 份</option>
+                            <option value="2">2 份</option>
+                            <option value="3">3 份</option>
+                            <option value="4">4 份</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <img src="/src/assets/images/dessert/tripInfo_Jp02.png" alt="">
+                        <label for="dessert_jpB_qty">
+                            套餐名稱：日式和菓子
+                            <br>
+                            套餐內容：日式和菓子, 煎茶
+                        </label>
+                        <select name="" id="dessert_jpB_qty">
+                            <option value="1" selected>1 份</option>
+                            <option value="2">2 份</option>
+                            <option value="3">3 份</option>
+                            <option value="4">4 份</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 左側訂單內容結束 -->
+
+        <!-- 右側訂單明細 -->
+        <div class="order_detail">
+            <p>您的預約 - 蜂鳴號</p>
+            <p>
+                <span>路線</span>
+                <span>台北 ⭢ 台中</span>
+            </p>
+            <p>
+                <span>出發時間</span>
+                <span>Fri,20 Sep 2024 09:00</span>
+            </p>
+            <p>
+                <span>抵達時間</span>
+                <span>Fri,20 Sep 2024 13:00</span>
+            </p>
+            <p>
+                <span>乘客人數</span>
+                <span>2 人
+                </span>
+            </p>
+            <p>
+                <span>車廂</span>
+                <span>景觀車廂Ｆ - 雙人座</span>
+            </p>
+            <p>
+                <span>座位</span>
+                <span>F1</span>
+            </p>
+            <p>
+                <span>餐點</span>
+                <span> 日式舒芙蕾套餐*1, <br>
+                    日式菓子套餐*1</span>
+            </p>
+            <p>
+                <span>金額</span>
+                <span>$4000</span>
+            </p>
+        </div>
+        <!-- 右側訂單明細結束 -->
+
+    </div>
+    <!-- 訂單資訊結束 -->
+
+    <!-- 訂位人資料 -->
+    <div>
+        <p><span>訂位人資料</span></p>
+        <label for="lastName">姓名</label>
+        <br>
+        <input type="text" id="Name" placeholder="請出入姓名">
+
+        <br>
+        <label for="phone">手機號碼</label>
+        <br>
+        <input type="tel" id="phone" pattern="09[0-9]{10}" placeholder="請輸入手機號碼">
+
+        <br>
+        <label for="email">電子郵件</label>
+        <br>
+        <input type="email" id="email" placeholder="請輸入電子郵件">
+
+        <br>
+        <label for="creditCard">信用卡號</label>
+        <br>
+        <input type="text" id="creditCard" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}"
+            placeholder="xxxx-xxxx-xxxx-xxxx">
+        <button>下一步</button>
+    </div>
+    <!-- 訂位人資料結束 -->
+
+    <a href="#" class="top">
+        Λ
+        <br>
+        Top
+    </a>
+</body>
+
+</html>

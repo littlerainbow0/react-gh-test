@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC:wght@200..900&display=swap");
+.order_detail p {
+  font-family: "Noto Sans TC";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 2%;
+}
+
+header {
+  background-image: url("/src/assets/images/train_interior/train_interior_01.png");
+}
+
+.form_apply div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.order_detail p {
+  width: 350px;
+  display: flex;
+  padding: 12px 0;
+  justify-content: space-between;
+  background-color: #D9D9D9;
+}/*# sourceMappingURL=reservation.css.map */

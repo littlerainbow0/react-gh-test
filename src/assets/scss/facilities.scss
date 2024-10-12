@@ -1,0 +1,151 @@
+// @import 'reset.scss';
+@import 'public.scss';
+// @import 'header.scss';
+
+// 列車介紹 
+.info_title {
+    display: flex;
+    margin: 28px auto;
+    width: 1024px;
+    // border-bottom: 2px solid $gray_800;
+    margin: 50px auto;
+
+    div {
+        margin-top: 20px;
+        width: 50%;
+        text-align: left;
+    }
+
+    h2 {
+        @extend %h3;
+        margin: 0 20px;
+    }
+
+    p {
+        @extend %body;
+        margin: 100px 20px 20px 20px;
+    }
+
+    img {
+        width: 550px;
+        height: 350px;
+        object-fit: cover;
+        border-radius: 25px;
+    }
+}
+
+.border_line {
+    margin: auto;
+    width: 1024px;
+    height: 3px;
+    background-image: linear-gradient(to left, #333, #333, #eee 0%, #333 75%);
+}
+
+// 車廂介紹
+.car_info {
+    margin-top: 20px;
+    width: 1024px;
+    margin: 50px auto;
+
+    h3 {
+        @extend %h4;
+        margin: 0 20px;
+
+    }
+
+    p {
+        @extend %body2;
+        margin: 20px;
+
+    }
+
+    div>div {
+        width: 50%;
+        margin: auto;
+    }
+
+    div>img {
+        width: 480px;
+        height: 340px;
+        object-fit: cover;
+        border-radius: 25px;
+    }
+
+    >div {
+        display: flex;
+        margin: 50px auto;
+    }
+
+    div:nth-of-type(odd) {
+        flex-direction: row-reverse;
+    }
+}
+
+// vip seat
+.vip_seat {
+    width: 1024px;
+    margin: 50px auto;
+
+    h3 {
+        @extend %h4;
+    }
+
+    p {
+        @extend %body2;
+    }
+
+}
+
+.vip_part1, .vip_part2{
+    margin: 20px auto;
+    width: 1024px;
+    display: flex;
+    gap:40px;
+
+    p {
+        @extend %body2;
+    }
+
+    div>img {
+        width: 480px;
+        height: 340px;
+        object-fit: cover;
+        border-radius: 25px;
+    }
+    div{
+        margin: auto;
+    }
+    
+    .vip_side_info{
+        margin:20px auto;
+
+        h4 {
+            @extend %h5;
+            margin: 20px auto;
+        }
+        
+        h5{
+            @extend %h6;
+            margin: 20px auto;
+        }
+
+    }
+}
+
+.vip_p2_title {
+    div {
+        width: 420px;
+        height: 10px;
+        border-bottom: 2px solid $gray_800;
+        margin-bottom: 12px;
+        margin-left: 60px;
+    }
+    h4{
+        @extend %h5;
+
+        margin-bottom: -12px;
+    }
+
+}
+
+

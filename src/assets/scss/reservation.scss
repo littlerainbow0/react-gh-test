@@ -1,0 +1,34 @@
+@import 'public.scss';
+
+// @import 'reset.scss';
+header {
+    background-image: url('/src/assets/images/train_interior/train_interior_01.png');
+
+}
+
+// 上方訂單需求
+.form_apply{
+    div{
+        display: flex;
+        flex-direction: column;
+        gap:12px;
+    }
+   
+}
+
+// 左側訂單內容
+
+
+// 右側訂單明細
+.order_detail{
+    
+    p {
+        width: 350px;
+        display: flex;
+        padding: 12px 0;
+        justify-content: space-between;
+        background-color: $gray_200;
+        @extend %body;
+    }
+
+}

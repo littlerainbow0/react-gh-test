@@ -1,0 +1,42 @@
+@import 'public.scss';
+@import 'trip_btn.scss';
+// @import 'reset.scss';
+
+header {
+    background-image: url('/src/assets/images/train_exterior/trip_hero.png');
+
+}
+
+.trip_section {
+    margin: 28px auto;
+    width: 1024px;
+    display: flex;
+    padding: 28px;
+    align-items: center;
+
+    h3 {
+        @extend %h3;
+    }
+
+    p {
+        @extend %body;
+    }
+
+    img {
+        width: 50%;
+        height: 360px;
+        margin-left: -25px;
+        
+    }
+
+    >div {
+        width: 50%;
+        height: 400px;
+        border: 1px solid $gray_800;
+        padding: 56px;
+        display: flex;
+        flex-direction: column;
+        gap:60px;
+    }
+
+}

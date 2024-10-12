@@ -1,0 +1,222 @@
+@import 'public.scss';
+// @import 'reset.scss';
+
+header {
+    background-image: url('/src/assets/images/train_exterior/tripInfo_hero02.png');
+
+}
+
+main {
+    // background-color: antiquewhite;
+    margin: 28px auto;
+}
+
+// 行程頁籤
+.itinerary {
+    margin: 28px auto;
+    border-bottom: 2px solid $gray_800;
+
+    nav ul {
+        text-align: center;
+    }
+
+    nav ul li {
+        display: inline-block;
+
+        &:nth-of-type(even) {
+            margin-right: 28px;
+        }
+
+        &:last-of-type {
+            margin-right: 0px;
+        }
+
+        button {
+            @extend %h5;
+            display: block;
+            text-decoration: none;
+            color: $secondary_50;
+            background-color: $secondary_800;
+            border: 1px solid $gray_800;
+            border-bottom: none;
+            border-radius: 15px 15px 0 0;
+            padding: 16px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $secondary_600;
+            }
+        }
+    }
+}
+
+// 行程主題
+.trip_title {
+    width: 1024px;
+    margin: 52px auto;
+    display: flex;
+
+    >div:first-of-type {
+        p>span {
+            @extend %h3;
+            background-color: $gray_200;
+            padding: 12px;
+            margin-right: 144px;
+        }
+
+        p {
+            @extend %h4;
+            margin-bottom: 24px;
+        }
+
+        img {
+            width: 550px;
+            height: 350px;
+            border: 1px solid $gray_800;
+        }
+
+    }
+
+    div:last-of-type {
+        // width: 550px;
+        margin-top: 56px;
+        padding: 0 36px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        p {
+            @extend %body;
+        }
+
+        a {
+            text-align: center;
+            text-decoration: none;
+            @extend %btn_lg;
+            background-color: $secondary_800;
+            height: 56px;
+            color: $secondary_50;
+            line-height: 56px;
+            letter-spacing: 4px;
+            border: 1px solid $gray_800;
+
+            &:hover {
+                background-color: $secondary_600;
+            }
+        }
+    }
+
+}
+
+// 風景介紹
+.view_info,
+.jp_dessert_info {
+    width: 1024px;
+    margin: auto;
+
+    >div:first-of-type {
+        background-color: $gray_200;
+        height: 56px;
+
+        h3 {
+            @extend %h4;
+            line-height: 32px;
+            padding: 12px;
+        }
+    }
+
+    .view_info_content {
+        width: 1024px;
+        display: flex;
+        margin: auto;
+        gap: 28px;
+
+        // text
+        >div:first-of-type {
+            width: 50%;
+
+            h5 {
+                width: 450px;
+                margin: 28px 12px 28px 0;
+                border-bottom: 2px solid $gray_800;
+                @extend %h6;
+
+            }
+
+            p {
+                width: 450px;
+                @extend %body;
+                margin-bottom: 28px;
+            }
+
+            img {
+                width: 450px;
+                height: 393px;
+                object-fit: cover;
+                border: 1px solid $gray_800;
+            }
+
+        }
+
+        // img
+        >div:last-of-type {
+            width: 50%;
+
+            img {
+                margin: 28px auto;
+                // padding: 28px;
+                width: 450px;
+                height: 320px;
+                border: 1px solid $gray_800;
+
+                &:first-of-type {
+                    position: relative;
+                }
+
+                &:last-of-type {
+                    margin-top: -100px;
+                    margin-left: 56px;
+                    z-index: 0;
+                }
+            }
+        }
+    }
+
+}
+
+// 餐點介紹
+.jp_dessert_info {
+    margin: 28px auto;
+
+    >div {
+        display: flex;
+
+    }
+
+    .dessert_section {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 12px;
+
+        h5 {
+            @extend %h6;
+            border-bottom: 2px solid $gray_800;
+            padding-top: 28px;
+        }
+        span{
+            @extend %body;
+        }
+
+        img {
+            width: 100%;
+            height: 450px;
+            border: 1px solid $gray_800;
+        }
+
+        &:last-of-type{
+            padding-left: 28px;
+        }
+    }
+}
