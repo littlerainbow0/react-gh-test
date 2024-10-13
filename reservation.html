@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/reservation.css">
+    <link rel="stylesheet" href="/src/assets/css/header.css">
+    <link rel="stylesheet" href="/src/assets/css/reservation.css">
+    <link rel="stylesheet" href="/src/assets/css/top_btn.css">
     <title>預約行程</title>
 </head>
 
-<body>
+<body class="reservation">
     <header>
         <div class="header_logo">
             <a href="#">
@@ -34,64 +35,86 @@
         </nav>
     </header>
     <!-- 上方訂單需求 -->
-    <form action="" class="form_apply">
-        <div>
-            <label for="people">旅客人數：</label>
-            <select name="" id="people">
-                <option value="1">1人</option>
-                <option value="2" selected>2人</option>
-                <option value="3">3人</option>
-                <option value="4">4人</option>
-            </select>
+    <form action="">
+        <div class="form_apply">
+
+            <div>
+                <label for="people">旅客人數：</label>
+                <select name="" id="people">
+                    <option value="1">1人</option>
+                    <option value="2" selected>2人</option>
+                    <option value="3">3人</option>
+                    <option value="4">4人</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="departure_date">出發日期：</label>
+                <input type="date" name="" id="departure_date">
+            </div>
+
+            <div>
+                <label for="departure_time">出發時間：</label>
+                <select name="" id="departure_time">
+                    <option value="14_17" selected>14:00 - 17:00</option>
+                    <option value="15_18">15:00 - 18:00</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="route">路線：</label>
+                <select name="" id="">
+                    <option value="taipei_taichung">台北 ⭢ 台中</option>
+                    <option value="taipei_hualien">台北 ⭢ 花蓮</option>
+                    <option value="taichung_tainan">台中 ⭢ 台南</option>
+                    <option value="taichung_kaohsiung">台中 ⭢ 高雄</option>
+                    <option value="kaohsiung_taichung">高雄 ⭢ 台中</option>
+                    <option value="kaohsiung_hualien">高雄 ⭢ 花蓮</option>
+                </select>
+            </div>
         </div>
 
-        <div>
-            <label for="car_type">車廂類型：</label>
-            <select name="" id="car_type">
-                <option value="f">景觀車廂Ｆ - 雙人座</option>
-                <option value="e">景觀車廂Ｅ - 四人座</option>
-                <option value="d">景觀車廂Ｄ - 雙人包廂</option>
-                <option value="a">豪華景觀車廂Ａ - VIP 四人席</option>
-            </select>
-        </div>
+        <div class="form_seat">
+            <div>
+                <div>
+                    <label for="car_type">車廂類型：</label>
+                    <select name="" id="car_type">
+                        <option value="f">景觀車廂Ｆ - 雙人座</option>
+                        <option value="e">景觀車廂Ｅ - 四人座</option>
+                        <option value="d">景觀車廂Ｄ - 雙人包廂</option>
+                        <option value="a">豪華景觀車廂Ａ - VIP 四人席</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="car_type">車廂類型：</label>
+                    <select name="" id="car_type">
+                        <option value="f">F1</option>
+                        <option value="e">F2</option>
+                        <option value="d">F3</option>
+                        <option value="a">F4</option>
+                        <option value="a">F5</option>
+                        <option value="a">F6</option>
+                        <option value="a">F7</option>
+                        <option value="a">F8</option>
+                    </select>
+                </div>
+            </div>
 
-        <div>
-            <label for="departure_date">出發日期：</label>
-            <input type="date" name="" id="departure_date">
-        </div>
-        
-        <div>
-            <label for="departure_time">出發時間：</label>
-            <select name="" id="departure_time">
-                <option value="14_17" selected>14:00 - 17:00</option>
-                <option value="15_18">15:00 - 18:00</option>
-            </select>
-        </div>
-
-        <div>
-            <label for="route">路線：</label><br>
-            <select name="" id="">
-                <option value="taipei_taichung">台北 ⭢ 台中</option>
-                <option value="taipei_hualien">台北 ⭢ 花蓮</option>
-                <option value="taichung_tainan">台中 ⭢ 台南</option>
-                <option value="taichung_kaohsiung">台中 ⭢ 高雄</option>
-                <option value="kaohsiung_taichung">高雄 ⭢ 台中</option>
-                <option value="kaohsiung_hualien">高雄 ⭢ 花蓮</option>
-            </select>
             <img src="/src/assets/images/plan/F車：8組雙人桌，1-2人，依人頭計價和點餐.svg" alt="">
         </div>
+
     </form>
     <!-- 上方應單需求結束 -->
 
-    <!-- 左側訂單內容 -->
+    <!-- 中間訂單內容 -->
     <div class="order_list">
-        <div class="trip_datail">
+        <!-- 左側訂單內容 -->
+        <div class="trip_detail">
 
             <div>
-                <p>
-                    <sapn>行程</sapn>
-                </p>
-                </p>
+                <h6>
+                    行程
+                </h6>
                 <div>
                     <img src="/src/assets/images/train_exterior/tripInfo_train01.png" alt="">
                     <p>台北⭢台中</p>
@@ -99,9 +122,9 @@
             </div>
 
             <div>
-                <p>
-                    <span>選擇餐點</span>
-                </p>
+                <h6>
+                    選擇餐點
+                </h6>
                 <div>
                     <div>
                         <img src="/src/assets/images/dessert/trip_Jp.png" alt="">
@@ -181,8 +204,8 @@
     <!-- 訂單資訊結束 -->
 
     <!-- 訂位人資料 -->
-    <div>
-        <p><span>訂位人資料</span></p>
+    <div class="user_info">
+        <h6>訂位人資料</h6>
         <label for="lastName">姓名</label>
         <br>
         <input type="text" id="Name" placeholder="請出入姓名">

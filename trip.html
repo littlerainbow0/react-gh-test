@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/trip.css">
+    <link rel="stylesheet" href="/src/assets/css/header.css">
+    <link rel="stylesheet" href="/src/assets/css/trip.css">
     <title>行程</title>
 </head>
 
@@ -25,20 +25,20 @@
 
         <nav class="header_nav">
             <ul>
-                <li><a href="">首頁</a></li>
+                <li><a href="/index.html">首頁</a></li>
                 <li><a href="">概念</a></li>
                 <li><a href="">饗宴</a></li>
-                <li><a href="">設施</a></li>
-                <li><a href="">旅程</a></li>
+                <li><a href="/facilities.html">設施</a></li>
+                <li><a href="/trip.html">旅程</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <div class="trip_section">
-            <div>
+            <div class="slider_info">
                 <h3> 日式甜點行程</h3>
                 <p>日式甜點融入日本文化，展現精緻與自然之美，讓每一口都感受傳統與創意的和諧。</p>
-                <a href="">查看行程
+                <a href="/tripInfo.html">查看行程
                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="30" fill="currentColor"
                         class="bi bi-arrow-right" viewBox="0 0 16 16">
                         <path fill-rule="evenodd"
@@ -46,14 +46,20 @@
                     </svg>
                 </a>
             </div>
-            <img src="/src/assets/images/dessert/trip_Jp.png" alt="">
+            <div class="slider">
+                <img src="/src/assets/images/dessert/trip_Jp.png" alt="" class="mySlides fade">
+                <img src="/src/assets/images/dessert/dessert_newDessert.jpg" alt="" class="mySlides fade">
+                <img src="/src/assets/images/dessert/trip_JpDrink2.png" alt="" class="mySlides fade">
+                <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+
+            </div>
         </div>
 
         <div class="trip_section">
-            <div>
+            <div class="slider_info">
                 <h3>台式甜點行程</h3>
                 <p>台式甜點色彩繽紛，口味多樣，結合傳統與創新，帶來獨特的味蕾享受與懷舊情懷。</p>
-                <a href="">查看行程
+                <a href="/tripInfo.html">查看行程
                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="30" fill="currentColor"
                         class="bi bi-arrow-right" viewBox="0 0 16 16">
                         <path fill-rule="evenodd"
@@ -61,14 +67,20 @@
                     </svg>
                 </a>
             </div>
-            <img src="/src/assets/images/dessert/trip_Tw.png" alt="">
+            <div class="slider">
+                <img src="/src/assets/images/dessert/trip_Tw.png" alt="" class="mySlides fade">
+                <img src="/src/assets/images/dessert/trip_TwDrink.png" alt="" class="mySlides fade">
+                <img src="/src/assets/images/dessert/tripInfo_Tw03.png" alt="" class="mySlides fade">
+                <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+
+            </div>
         </div>
 
         <div class="trip_section">
-            <div>
+            <div class="slider_info">
                 <h3>歐式甜點行程</h3>
                 <p>歐式甜點講究工藝與口感，融合精緻的外觀和豐富的風味，為味蕾帶來無限的驚喜與享受。</p>
-                <a href="">查看行程
+                <a href="/tripInfo.html">查看行程
                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="30" fill="currentColor"
                         class="bi bi-arrow-right" viewBox="0 0 16 16">
                         <path fill-rule="evenodd"
@@ -76,11 +88,47 @@
                     </svg>
                 </a>
             </div>
-            <img src="/src/assets/images/dessert/trip_Eur.png" alt="">
-        </div>
+            <div class="slider">
+                <img src="/src/assets/images/dessert/trip_Eur.png" alt="" class="mySlides fade">
+                <img src="/src/assets/images/dessert/tripInfo_Eur03.png" alt="" class="mySlides fade">
+                <img src="/src/assets/images/dessert/trip_EurDrink.png" alt="" class="mySlides fade">
+                <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
 
+            </div>
+
+        </div>
+        <!-- Next and previous buttons -->
     </main>
 
+    <script>
+        let slideIndexes = [1, 1, 1];
+
+        function showSlides(n, sectionIndex) {
+            let slides = document.querySelectorAll(`.trip_section:nth-child(${sectionIndex + 1}) .mySlides`);
+
+            if (n > slides.length) { slideIndexes[sectionIndex] = 1; }
+            if (n < 1) { slideIndexes[sectionIndex] = slides.length; }
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slides[slideIndexes[sectionIndex] - 1].style.display = "block";
+        }
+
+        function plusSlides(n, sectionIndex) {
+            showSlides(slideIndexes[sectionIndex] += n, sectionIndex);
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const sections = document.querySelectorAll('.trip_section');
+
+            sections.forEach((section, index) => {
+                showSlides(slideIndexes[index], index);
+            });
+        }); 
+
+    </script>
 </body>
 
 </html>

@@ -75,17 +75,18 @@ table {
 
 header {
   text-align: center;
-  background-image: url("/src/assets/images/train_exterior/Facilities_hero.png");
-  width: 100%;
+  background-image: url("../images/train_exterior/Facilities_hero.png");
+  width: 100vw;
   height: 640px;
   background-repeat: no-repeat;
   background-size: 100% 640px;
 }
 
 .header_logo {
+  @apply m-auto pt-6;
   padding-top: 25px;
   color: rgba(255, 255, 255, 0.6);
-  margin: auto;
+  margin: 0 auto 0 52px;
 }
 .header_logo a:nth-of-type(2) {
   text-align: center;

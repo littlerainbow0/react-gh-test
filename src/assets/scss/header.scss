@@ -1,10 +1,12 @@
 @import 'reset.scss';
 @import 'public.scss';
+// @import 'style.scss';
 
 header {
+    // @apply text-center w-full bg-no-repeat;
     text-align: center;
-    background-image: url('/src/assets/images/train_exterior/Facilities_hero.png');
-    width: 100%;
+    background-image: url('../images/train_exterior/Facilities_hero.png');
+    width: 100vw;
     height: 640px;
     background-repeat: no-repeat;
     background-size: 100% 640px;
@@ -12,12 +14,13 @@ header {
 }
 
 .header_logo {
-    // @apply pt-6;
+    @apply m-auto pt-6;
     padding-top: 25px;
     color: rgba(255, 255, 255, 0.6);
-    margin: auto;
+    margin: 0 auto 0 52px;
 
     a:nth-of-type(2) {
+        // @apply text-center float-right;
         @extend %body;
         text-align: center;
         float: right;

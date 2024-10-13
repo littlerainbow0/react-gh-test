@@ -6,29 +6,174 @@ header {
 
 }
 
-// 上方訂單需求
-.form_apply{
-    div{
-        display: flex;
-        flex-direction: column;
-        gap:12px;
+.reservation {
+
+    select,
+    input {
+        border: none;
+        border-bottom: 1px solid $gray_800;
+        @extend %body;
     }
-   
+
+    h6 {
+        @extend %h6;
+        border-bottom: 1px solid $gray_800;
+        margin: 0 auto 24px auto;
+    }
+    label{
+        @extend %body;
+    }
 }
 
-// 左側訂單內容
 
+// 上方訂單需求
+.form_apply,
+.form_seat {
+    display: flex;
+    width: 1024px;
+    margin: 28px auto;
+
+}
+
+.form_apply {
+    justify-content: space-around;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 12px auto;
+        justify-content: end;
+        width: 20%;
+    }
+}
+
+.form_seat {
+    margin: auto;
+
+    >div {
+        width: 20%;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        margin: 0 12px 12px 12px;
+        justify-content: start;
+        gap: 12px;
+
+    }
+
+    img {
+        width: 76.5%;
+    }
+}
+
+// 訂單內容
+.order_list {
+    width: 1024px;
+    margin: 28px auto;
+    display: flex;
+    align-items: stretch;
+
+}
+
+
+
+// 左側訂單內容
+.trip_detail {
+    margin: 0 24px;
+
+    div {
+        width: 600px;
+    }
+   
+
+    div{
+        &:first-of-type {
+            img {
+                width: 420px;
+                height: 275px;
+                margin-bottom: 24px;
+            }
+    
+            p{
+                @extend %body;
+            }
+    
+            div {
+                display: flex;
+    
+                p {
+                    margin: auto;
+                }
+            }
+    
+        }
+
+        &:last-of-type {
+            select {
+                height: 28px;
+            }
+    
+           
+    
+            div {
+                margin: 12px 0;
+    
+                div {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    
+                    img {
+                        width: 200px;
+                        height: 144px;
+                    }
+                }
+            }
+        }
+    }
+
+}
 
 // 右側訂單明細
-.order_detail{
-    
+.order_detail {
+    margin: 0 auto;
+
     p {
         width: 350px;
         display: flex;
-        padding: 12px 0;
+        padding: 22px 12px;
         justify-content: space-between;
         background-color: $gray_200;
         @extend %body;
     }
 
+}
+
+// 訂位人資料
+.user_info {
+    width: 1024px;
+    margin: 0 auto 24px auto;
+
+    input{
+        margin: 20px auto;
+    }
+
+    button{
+        @extend %btn_lg;
+        padding: 12px 120px;
+        letter-spacing: 4px;
+        float: right;
+        border-radius: 25px;
+        border: 1px solid $gray_800;
+        background-color: $gray_200;
+
+        &::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+    }
 }
