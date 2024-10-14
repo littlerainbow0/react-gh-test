@@ -1,11 +1,14 @@
+const { nextui } = require("@nextui-org/react");
+
 /** @type {import('tailwindcss').Config} */
+
 export default {
   content: [
     // 必須在 content 陣列中定位，確保相對應檔案能夠解讀 tailwind 的樣式
     './**/*.html', // 包含專案中的所有 html 文件 (排除 node_modules)
     '!./node_modules/**/*', // 排除 node_modules
-    './src/**/*.{js,css,scss}' // 包含 src 資料夾下的所有 JS, CSS, SCSS 文件
-  ],
+    './src/**/*.{js,jsx,css,scss}', // 包含 src 資料夾下的所有 JS, CSS, SCSS 文件
+  ],                                                                                                                                    
   theme: {
     screen: {
       'none': '375px',

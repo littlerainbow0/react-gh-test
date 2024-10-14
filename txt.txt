@@ -1,6 +1,7 @@
 .gitignore  git忽略掉的檔案 原則上是不需要遷入的檔案
 
-
+npm install tailwindcss
+npx tailwindcss init
 
 ＃監聽 tailwindcss 的檔案編譯
 npx tailwindcss -i ./src/all.css -o ./dist/css/style.css --watch
@@ -9,3 +10,15 @@ npm install @nextui-org/react
 
 # Vite專案運作
 npm run dev
+
+npm install react-router-dom
+
+在vite專案中查看版本
+npm list vite
+npm list react
+
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/littlerainbow0/HoneyChime.git
+git push -u origin chishauo7
+git push -u origin
