@@ -50,9 +50,9 @@ const navText = [
 const Sidebar = () => {
   return (
     <IconContext.Provider value={{ size: 20, color: "#000000" }}>
-      <div className="flex flex-col w-64 p-4 h-screen m-10" style={{ backgroundColor: 'rgba(75, 0, 130, 0.5)' }}>
+      <div className="flex flex-col w-64 p-10 h-screen " style={{ backgroundColor: 'rgba(75, 0, 130, 0.5)' }}>
         <Link href="#" className="">
-          <span className="text-h5 font-title font-bold mb-3">
+          <span className="text-h3 font-title font-bold mb-10">
             後臺管理
           </span>
         </Link>

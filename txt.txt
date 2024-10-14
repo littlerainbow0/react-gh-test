@@ -22,3 +22,5 @@ git commit -m "Initial commit"
 git remote add origin https://github.com/littlerainbow0/HoneyChime.git
 git push -u origin chishauo7
 git push -u origin
+
+npm install autoprefixer --save-dev

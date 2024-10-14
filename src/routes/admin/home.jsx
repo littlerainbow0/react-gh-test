@@ -1,7 +1,7 @@
 // components/home.jsx
 import React from 'react';
 import Navbar from '../../components/admin/navbar.jsx';
-import CustomTable from '../../components/admin/costomTable.jsx'; // 確保導入的是正確的路徑
+import CustomTable from '../../components/admin/customTable.jsx'; // 確保導入的是正確的路徑
 
 const columns = ["Name", "Age", "Email","hi"];
 const data = [
