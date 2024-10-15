@@ -56,7 +56,7 @@
   }
 }
 
-header {
+.trip_hero {
   background-image: url("/src/assets/images/train_exterior/trip_hero.png");
 }
 
@@ -121,6 +121,20 @@ header {
 @keyframes fade {
   from {
     opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slowShow, main {
+  animation-name: slowShow;
+  animation-duration: 3s;
+}
+
+@keyframes slowShow {
+  from {
+    opacity: 0;
   }
   to {
     opacity: 1;

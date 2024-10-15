@@ -15,7 +15,8 @@
   letter-spacing: 10%;
 }
 
-.vip_p2_title h4, .vip_part1 .vip_side_info h4, .vip_part2 .vip_side_info h4 {
+.vip_p2_title h4, .vip_part1 .vip_side_info h4,
+.vip_part2 .vip_side_info h4 {
   font-family: "Noto Serif TC", "Noto Sans TC";
   font-size: 20px;
   font-weight: 600;
@@ -23,7 +24,8 @@
   letter-spacing: 10%;
 }
 
-.vip_part1 .vip_side_info h5, .vip_part2 .vip_side_info h5 {
+.vip_part1 .vip_side_info h5,
+.vip_part2 .vip_side_info h5 {
   font-family: "Noto Serif TC", "Noto Sans TC";
   font-size: 18px;
   font-weight: 600;
@@ -39,12 +41,17 @@
   letter-spacing: 2%;
 }
 
-.vip_part1 p, .vip_part2 p, .vip_seat p, .car_info p {
+.vip_part1 p,
+.vip_part2 p, .vip_seat p, .car_info p {
   font-family: "Noto Sans TC";
   font-size: 14px;
   font-weight: 400;
   line-height: 150%;
   letter-spacing: 2%;
+}
+
+.facilities_hero {
+  background-image: url("/src/assets/images/train_exterior/Facilities_hero.png");
 }
 
 .info_title {
@@ -113,29 +120,35 @@
   width: 1024px;
   margin: 50px auto;
 }
-.vip_part1, .vip_part2 {
+.vip_part1,
+.vip_part2 {
   margin: 20px auto;
   width: 1024px;
   display: flex;
   gap: 40px;
 }
-.vip_part1 div > img, .vip_part2 div > img {
+.vip_part1 div > img,
+.vip_part2 div > img {
   width: 480px;
   height: 340px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 25px;
 }
-.vip_part1 div, .vip_part2 div {
+.vip_part1 div,
+.vip_part2 div {
   margin: auto;
 }
-.vip_part1 .vip_side_info, .vip_part2 .vip_side_info {
+.vip_part1 .vip_side_info,
+.vip_part2 .vip_side_info {
   margin: 20px auto;
 }
-.vip_part1 .vip_side_info h4, .vip_part2 .vip_side_info h4 {
+.vip_part1 .vip_side_info h4,
+.vip_part2 .vip_side_info h4 {
   margin: 20px auto;
 }
-.vip_part1 .vip_side_info h5, .vip_part2 .vip_side_info h5 {
+.vip_part1 .vip_side_info h5,
+.vip_part2 .vip_side_info h5 {
   margin: 20px auto;
 }
 
@@ -148,4 +161,18 @@
 }
 .vip_p2_title h4 {
   margin-bottom: -12px;
+}
+
+.fade, main {
+  animation-name: fade;
+  animation-duration: 4s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=facilities.css.map */

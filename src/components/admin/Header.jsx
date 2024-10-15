@@ -1,7 +1,8 @@
 // Header.jsx
 import React, { Component } from 'react';
 // import React from 'react';
-import logo from '/src/assets/images/icon/LOGO.svg'; // 確保路徑正確
+import '../../assets/css/header.css';
+// import '/src/assets/images/train_exterior/Facilities_hero.png';
 
 const Header = () => {
     return (
@@ -22,8 +23,8 @@ const Header = () => {
                     <li><a href="">首頁</a></li>
                     <li><a href="">概念</a></li>
                     <li><a href="">饗宴</a></li>
-                    <li><a href="">設施</a></li>
-                    <li><a href="">旅程</a></li>
+                    <li><a href="/Facilities">設施</a></li>
+                    <li><a href="/Trip">旅程</a></li>
                 </ul>
             </nav>
         </header>

@@ -1,6 +1,6 @@
 // import React from 'react';
 import React, { Component } from 'react';
-import Header from '../../components/admin/Header'; // 確保路徑正確
+import Header from '../../components/admin/Header.jsx'; // 確保路徑正確
 import '../../assets/css/header.css';
 import '../../assets/css/facilities.css';
 import '../../assets/css/top_btn.css';
@@ -8,7 +8,9 @@ import '../../assets/css/top_btn.css';
 const Facilities = () => {
     return (
         <div>
+            <header className="facilities_hero">
             <Header />
+            </header>
             <main>
                 <div className="info_title">
                     <div>

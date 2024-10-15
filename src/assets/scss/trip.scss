@@ -1,13 +1,18 @@
 @import 'public.scss';
 @import 'trip_btn.scss';
 // @import 'reset.scss';
+// @import 'style.css';
 
-header {
+.trip_hero {
     background-image: url('/src/assets/images/train_exterior/trip_hero.png');
 
 }
+main{
+    @extend .slowShow;
+}
 
 .trip_section {
+    // @apply  bg-red-800;
     margin: 28px auto;
     width: 1024px;
     display: flex;
@@ -32,7 +37,7 @@ header {
         display: flex;
         flex-direction: column;
         gap: 60px;
-        
+
         a{
             color: $gray_800;
         }
@@ -92,6 +97,20 @@ header {
         to {
             opacity: 1
         }
+    }
+}
+.slowShow{
+    animation-name: slowShow;
+    animation-duration: 3s;
+}
+
+@keyframes slowShow {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
     }
 }
 

@@ -2,6 +2,13 @@
 @import 'public.scss';
 // @import 'header.scss';
 
+main {
+    @extend .fade;
+}
+.facilities_hero{
+    background-image: url("/src/assets/images/train_exterior/Facilities_hero.png");
+
+}
 // 列車介紹 
 .info_title {
     display: flex;
@@ -96,11 +103,12 @@
 
 }
 
-.vip_part1, .vip_part2{
+.vip_part1,
+.vip_part2 {
     margin: 20px auto;
     width: 1024px;
     display: flex;
-    gap:40px;
+    gap: 40px;
 
     p {
         @extend %body2;
@@ -112,19 +120,20 @@
         object-fit: cover;
         border-radius: 25px;
     }
-    div{
+
+    div {
         margin: auto;
     }
-    
-    .vip_side_info{
-        margin:20px auto;
+
+    .vip_side_info {
+        margin: 20px auto;
 
         h4 {
             @extend %h5;
             margin: 20px auto;
         }
-        
-        h5{
+
+        h5 {
             @extend %h6;
             margin: 20px auto;
         }
@@ -140,7 +149,8 @@
         margin-bottom: 12px;
         margin-left: 60px;
     }
-    h4{
+
+    h4 {
         @extend %h5;
 
         margin-bottom: -12px;
@@ -149,3 +159,17 @@
 }
 
 
+.fade {
+    animation-name: fade;
+    animation-duration: 4s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}

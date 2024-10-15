@@ -1,7 +1,7 @@
 @import 'public.scss';
 
 // @import 'reset.scss';
-header {
+.reservation_hero {
     background-image: url('/src/assets/images/train_interior/train_interior_01.png');
 
 }
@@ -20,7 +20,8 @@ header {
         border-bottom: 1px solid $gray_800;
         margin: 0 auto 24px auto;
     }
-    label{
+
+    label {
         @extend %body;
     }
 }
@@ -50,7 +51,6 @@ header {
 
 .form_seat {
     margin: auto;
-
     >div {
         width: 20%;
     }
@@ -59,13 +59,16 @@ header {
         display: flex;
         flex-direction: column;
         margin: 0 12px 12px 12px;
-        justify-content: start;
+        // justify-content: start;
+        // align-items: flex-start;
         gap: 12px;
 
     }
 
     img {
+        margin: 0 12px 0 auto;
         width: 76.5%;
+        height: 384px;
     }
 }
 
@@ -87,45 +90,45 @@ header {
     div {
         width: 600px;
     }
-   
 
-    div{
+
+    div {
         &:first-of-type {
             img {
                 width: 420px;
                 height: 275px;
                 margin-bottom: 24px;
             }
-    
-            p{
+
+            p {
                 @extend %body;
             }
-    
+
             div {
                 display: flex;
-    
+
                 p {
                     margin: auto;
                 }
             }
-    
+
         }
 
         &:last-of-type {
             select {
                 height: 28px;
             }
-    
-           
-    
+
+
+
             div {
                 margin: 12px 0;
-    
+
                 div {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    
+
                     img {
                         width: 200px;
                         height: 144px;
@@ -157,23 +160,43 @@ header {
     width: 1024px;
     margin: 0 auto 24px auto;
 
-    input{
+    input {
         margin: 20px auto;
     }
 
-    button{
+    button {
         @extend %btn_lg;
         padding: 12px 120px;
         letter-spacing: 4px;
         float: right;
         border-radius: 25px;
-        border: 1px solid $gray_800;
+        border: 1px solid $gray_600;
         background-color: $gray_200;
 
-        &::after{
+        &::after {
             content: "";
             display: block;
             clear: both;
         }
+
+        &:hover {
+            background-color: $gray_400;
+            cursor: pointer;
+        }
+    }
+
+    span {
+        @extend %body2;
+        color: $danger_400;
+        margin-left: 12px;
+        visibility: hidden;
+        // &::after{
+        //     content: "請輸入正確！";
+        // }
+    }
+
+    span.active {
+        visibility: visible;
+        /* 當有錯誤時顯示 */
     }
 }
