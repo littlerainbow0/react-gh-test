@@ -17,6 +17,13 @@ export default {
       '3xl': '1920px',
     },
     container: {
+      colors:{
+        dark: 'rgb(32,30,30)',
+        darkborwn: 'rgb(38,33,33)',
+        brown: 'rgb(138,110,110)',
+        lightbrown: 'rgb(187,155,155)',
+        lightyellow:'rgb(255,245,245)'
+      },
       padding:{
         none:'1.25rem',
         sm:'2.5rem',
