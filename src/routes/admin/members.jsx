@@ -2,43 +2,44 @@
 import React from 'react';
 import Navbar from '../../components/admin/navbar.jsx';
 import { DropdownItem, DropdownTrigger, Dropdown, DropdownMenu } from "@nextui-org/react";
-import CustomTable from '../../components/admin/costomTable.jsx'; // 確保導入的是正確的路徑
+import CustomTable from '../../components/admin/customTable.jsx'; // 確保導入的是正確的路徑
 
-const columns = ["User ID", "會員等級", "搭乘次數", "棄單次數", "註冊時間", "最新登入"];
+const columns = ["userId", "level", "numberOfRides", "abandonedOrders", "registrationTime", "latestLogin"];
 const data = [
     {
-        "User ID": 1,
-        "會員等級": "VIP",
-        "搭乘次數": "2",
+        userId: 1,
+        level: "VIP",
+        numberOfRides: "2",
         // 不同訂單日期計算次數
-        "棄單次數": "0",
+        abandonedOrders: "0",
         // 訂單狀態計算超過發車日期狀態未匯款
-        "註冊時間": "2024/06/28 09:00",
-        "最新登入": "2024/11/13 16:30",
+        registrationTime: "2024/06/28 09:00",
+        latestLogin: "2024/11/13 16:30",
     },
 ];
-const individualInformationColumns = ["User ID", "姓名", "Email", "手機", "生日", "縣市", "區/鄉/鎮/市", "詳細地址"];
+const individualInformationColumns = ["userId", "name", "email", "phone", "birth", "county", "dist", "address"];
 const individualInformationData = [
     {
-        "User ID": 1,
-        "姓名": "林少晴",
-        "Email": "onoyi17@gmail.com",
-        "手機": "0912345678",
-        "生日": "1997/02/22",
-        "縣市": "台中市",
-        "區/鄉/鎮/市": "南屯區",
-        "詳細地址": "公益路二段51號18樓"
+        userId: 1,
+        name: "林少晴",
+        email: "onoyi17@gmail.com",
+        phone: "0912345678",
+        birth: "1997/02/22",
+        county: "台中市",
+        dist: "南屯區",
+        address: "公益路二段51號18樓"
     },
 ];
-const historyOrdersColumns = ["訂單編號", "訂單日期", "發車日期", "訂單狀態", "更新時間", "總金額($NT)"];
+const historyOrdersColumns = ["orderId", "orderDate", "departureDate", "orderStatus", "updateTime", "totalAmount"];
 const historyOrdersData = [
     {
-        "訂單編號": 1,
-        "訂單日期": "2024/10/10",
-        "發車日期": "2024/11/11",
-        "訂單狀態": "已付款",
-        "更新時間": "2024/10/11",
-        "總金額($NT)": "4000",
+        orderId: 1,
+        orderDate: "2024/10/10",
+        departureDate: "2024/11/11",
+        orderStatus: "已付款",
+        // 已付款 / 未付款 / 已取消 / 棄單
+        updateTime: "2024/10/11",
+        totalAmount: "4000",
     },
 ];
 
