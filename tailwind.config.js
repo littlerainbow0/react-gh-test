@@ -4,7 +4,7 @@ export default {
     // 必須在 content 陣列中定位，確保相對應檔案能夠解讀 tailwind 的樣式
     './**/*.html', // 包含專案中的所有 html 文件 (排除 node_modules)
     '!./node_modules/**/*', // 排除 node_modules
-    './src/**/*.{js,css,scss}' // 包含 src 資料夾下的所有 JS, CSS, SCSS 文件
+    './src/**/*.{js,jsx,ts,tsx,css,scss}' // 包含 src 資料夾下的所有 JS, CSS, SCSS JSX文件
   ],
   theme: {
     screen: {
@@ -27,6 +27,7 @@ export default {
         '3xl':'3.75rem',
       },
     },
+
     extend: {
       width:{
         '135':'540px',
@@ -52,15 +53,39 @@ export default {
         'titleFont':[ "Noto Serif TC", "serif"], //思源宋體
         'bodyFont':["Noto Sans TC", 'system-ui'], //思源黑體
       },
+      translate: {
+        '1/5': '20%', // 定義對應的值
+        '1/10': '10%',   
+      },
+      spacing: {
+        'containerF': '0rem', // 為所有斷點定義統一的 padding 值
+      },
+      backgroundImage: {
+        'custom-icon': "url('../../src/assets/img/icon/polygonWhite.svg')",
+        'custom-icon2': "url('../../src/assets/img/icon/polygonWhiteLine.svg')",
+        'custom-icon3': "url('../../src/assets/img/icon/polygonBlackLine.svg')",
+        'custom-icon4': "url('../../src/assets/img/icon/Polygon5.png')",
+      },
+      aspectRatio: {
+        '4/4.5': '4 / 4.5',
+      },
     },
   },
   plugins: [
     function ({ addUtilities }) {
-      addUtilities({
+      const newUtilities = {
+        // 自定義首行縮排類別
         '.text-indent-1': {
-          'text-indent': '1rem', // 自定義首行縮排
+          'text-indent': '1rem',
         },
-      });
+        // 自定義 containerF 類別
+        '.containerF': {
+          padding: '0rem',
+        },
+      };
+
+      // 添加自定義工具類，並支持響應式和 hover 狀態
+      addUtilities(newUtilities, ['responsive', 'hover']);
     },
   ],
 }
