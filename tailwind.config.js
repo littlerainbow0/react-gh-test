@@ -61,10 +61,10 @@ export default {
         'containerF': '0rem', // 為所有斷點定義統一的 padding 值
       },
       backgroundImage: {
-        'custom-icon': "url('../../src/assets/img/icon/polygonWhite.svg')",
-        'custom-icon2': "url('../../src/assets/img/icon/polygonWhiteLine.svg')",
-        'custom-icon3': "url('../../src/assets/img/icon/polygonBlackLine.svg')",
-        'custom-icon4': "url('../../src/assets/img/icon/Polygon5.png')",
+        'custom-icon': "url('../../src/assets/images/icon/polygonWhite.svg')",
+        'custom-icon2': "url('../../src/assets/images/icon/polygonWhiteLine.svg')",
+        'custom-icon3': "url('../../src/assets/images/icon/polygonBlackLine.svg')",
+        'custom-icon4': "url('../../src/assets/images/icon/Polygon5.png')",
       },
       aspectRatio: {
         '4/4.5': '4 / 4.5',

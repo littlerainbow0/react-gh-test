@@ -3,9 +3,11 @@
 
 
 ＃監聽 tailwindcss 的檔案編譯
-npx tailwindcss -i ./src/all.css -o ./dist/css/style.css --watch
+npx tailwindcss -i /src/all.css -o ./src/assets/css/style.css --watch
+
 
 npm install @nextui-org/react
 
 # Vite專案運作
+
 npm run dev
