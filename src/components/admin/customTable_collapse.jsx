@@ -16,14 +16,28 @@ import {
   Chip,
   User,
   Pagination,
+  button,
 } from "@nextui-org/react";
 import { capitalize } from "./utils";
 import { div } from "framer-motion/client";
 
+import { BsCaretDown } from "react-icons/bs";
+import { BsCaretUpFill } from "react-icons/bs";
+
+
 const CustomTable = ({ columns, data }) => {
+  const [iconType, setIconType] = React.useState(true); // true表示BsCaretDown，false表示BsCaretUpFill
+
+  const iconCollapse = () => {
+    return iconType ? <BsCaretDown /> : <BsCaretUpFill />;
+  };
+
+  const iconCollapseClick = () => {
+    setIconType(prev => !prev); // 切換iconType的狀態
+  };
   return (
-    <div className="my-5" style={{width: '100%'}}>
-      <Table className="bg-dark text-center" style={{width: '100%'}}>
+    <div className="my-5" style={{ width: '100%' }}>
+      <Table className="bg-dark text-center" style={{ width: '100%' }}>
         <TableHeader className="flex-col">
           {columns.map((column) => (
             <TableColumn key={column}>
@@ -36,20 +50,23 @@ const CustomTable = ({ columns, data }) => {
         <TableBody>
           {data.map((item, index) => (
             <TableRow key={index}>
-              {columns.map((column) => (
+              {columns.map((column, index) => (
                 <TableCell key={column}>
                   <p className="text-lightyellow font-bodyFont text-p-3 mx-5 mb-2">
                     {item[column]}
                   </p>
                 </TableCell>
               ))}
+              <button key={index} onClick={iconCollapseClick}>
+                {iconCollapse()}
+              </button>
             </TableRow>
           ))}
         </TableBody>
       </Table>
     </div>
-
   );
+
 };
 
 export default CustomTable;

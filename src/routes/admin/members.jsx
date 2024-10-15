@@ -3,9 +3,20 @@ import React from 'react';
 import Navbar from '../../components/admin/navbar.jsx';
 import { DropdownItem, DropdownTrigger, Dropdown, DropdownMenu } from "@nextui-org/react";
 import CustomTable from '../../components/admin/customTable.jsx'; // 確保導入的是正確的路徑
+import CustomTableCollapse from '../../components/admin/customTable_collapse.jsx'; // 確保導入的是正確的路徑
 
 const columns = ["userId", "level", "numberOfRides", "abandonedOrders", "registrationTime", "latestLogin"];
 const data = [
+    {
+        userId: 1,
+        level: "VIP",
+        numberOfRides: "2",
+        // 不同訂單日期計算次數
+        abandonedOrders: "0",
+        // 訂單狀態計算超過發車日期狀態未匯款
+        registrationTime: "2024/06/28 09:00",
+        latestLogin: "2024/11/13 16:30",
+    },
     {
         userId: 1,
         level: "VIP",
@@ -48,10 +59,10 @@ const AdminMember = () => {
         <div className="flex flex-row">
             <Navbar />
             <div className='flex-col ml-10'>
-            <h1>admin/home</h1>
-            <CustomTable columns={columns} data={data} />
-            <CustomTable columns={individualInformationColumns} data={individualInformationData}></CustomTable>
-            <CustomTable columns={historyOrdersColumns} data={historyOrdersData}></CustomTable>
+                <h1>會員管理</h1>
+                <CustomTableCollapse columns={columns} data={data} />
+                <CustomTable columns={individualInformationColumns} data={individualInformationData}></CustomTable>
+                <CustomTable columns={historyOrdersColumns} data={historyOrdersData}></CustomTable>
             </div>
 
         </div>

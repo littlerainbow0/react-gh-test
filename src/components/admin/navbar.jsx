@@ -26,52 +26,78 @@ import { BsEnvelopeAt } from "react-icons/bs";
 import { IconContext } from "react-icons";
 // -- icon指定統一格式 */
 
+// /* LOGO
+import Logo from "../../honeyChimeLogo.jsx"
+// -- LOGO /*
+
 // tailwind設定: https://www.creative-tim.com/twcomponents/cheatsheet/
 // flex-col = flex-direction: column;
 
 const navText = [
-  {icon: <BsCalendar2Range />,
-   item: "訂單管理"},
-  {icon: <BsCalendar2Week />,
-   item: "訂位狀態"},
-  {icon: <BsJournals />,
-   item: "旅程管理"},
-  {icon: <BsJournalBookmarkFill />,
-   item: "旅程範本"},
-  {icon: <BsWindowPlus />,
-   item: "最新消息"},
-  {icon: <BsFillPeopleFill />,
-   item: "會員管理"},
-  {icon: <BsEnvelopeAt />,
-   item: "會員諮詢"},
+  {
+    icon: <BsCalendar2Range />,
+    item: "訂單管理"
+  },
+  {
+    icon: <BsCalendar2Week />,
+    item: "訂位狀態"
+  },
+  {
+    icon: <BsJournals />,
+    item: "旅程管理"
+  },
+  {
+    icon: <BsJournalBookmarkFill />,
+    item: "旅程範本"
+  },
+  {
+    icon: <BsWindowPlus />,
+    item: "最新消息"
+  },
+  {
+    icon: <BsFillPeopleFill />,
+    item: "會員管理"
+  },
+  {
+    icon: <BsEnvelopeAt />,
+    item: "會員諮詢"
+  },
 ]
 
 // 側邊欄內容
 const Sidebar = () => {
   return (
-    <IconContext.Provider value={{ size: 20, color: "#000000" }}>
-      <div className="flex flex-col w-64 p-10 h-screen " style={{ backgroundColor: 'rgba(75, 0, 130, 0.5)' }}>
-        <Link href="#" className="">
-          <span className="text-h3 font-title font-bold mb-10">
+    <div className="flex-col justify-center w-64 p-5 h-screen bg-dark overflow-y-auto text-clip ">
+      <Link href="#">
+        <div className="mb-10 p-5">
+          <Logo color="rgb(255,245,245)"></Logo>
+          <h2 className="font-titleFont text-h3 font-bold mt-10 mb-2 text-lightyellow">
             後臺管理
-          </span>
-        </Link>
+          </h2>
+          <p className="text-brown text-p-3 font-bodyFont">
+            推薦使用電腦版
+          </p>
+        </div>
+      </Link>
+      <div className="font-titleFont flex flex-col text-lightbrown items-center">
         {/* function() => () 這個等於有callback
             = function() {return} */}
-        {navText.map((elem,index)=>(
-        <div className="flex items-center mb-2" key={index}>
-          {elem.icon}
-          <Link href="#" className="ml-3">{elem.item}</Link>
-        </div>
+        {navText.map((elem, index) => (
+          <div className="flex items-center mb-5" key={index}>
+            {elem.icon}
+            <Link href="#" className="ml-2 text-h6 font-semibold ">
+              {elem.item}
+            </Link>
+          </div>
         ))}
       </div>
-    </IconContext.Provider>
+    </div>
   );
 
 };
 
 export default function App() {
   return (
-      <Sidebar />
+    <Sidebar />
   );
 }
