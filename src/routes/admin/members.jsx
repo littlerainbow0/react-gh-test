@@ -1,11 +1,11 @@
 // components/home.jsx
 import React from 'react';
-import Navbar from '../../components/admin/navbar.jsx';
 import { DropdownItem, DropdownTrigger, Dropdown, DropdownMenu } from "@nextui-org/react";
+import Navbar from '../../components/admin/navbar.jsx';
 import CustomTable from '../../components/admin/customTable.jsx'; // 確保導入的是正確的路徑
 import CustomTableCollapse from '../../components/admin/customTable_collapse.jsx'; // 確保導入的是正確的路徑
 
-const columns = ["userId", "level", "numberOfRides", "abandonedOrders", "registrationTime", "latestLogin"];
+var columns = ["userId", "level", "numberOfRides", "abandonedOrders", "registrationTime", "latestLogin"];
 const data = [
     {
         userId: 1,

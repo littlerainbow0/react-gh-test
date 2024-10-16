@@ -46,20 +46,25 @@ const CustomTable = ({ columns, data }) => {
               </p>
             </TableColumn>
           ))}
+          <TableColumn>
+            <p></p>
+          </TableColumn>
         </TableHeader>
         <TableBody>
           {data.map((item, index) => (
-            <TableRow key={index}>
+            <TableRow key={item}>
               {columns.map((column, index) => (
-                <TableCell key={column}>
-                  <p className="text-lightyellow font-bodyFont text-p-3 mx-5 mb-2">
-                    {item[column]}
-                  </p>
-                </TableCell>
+                  <TableCell key={column}>
+                    <p className="text-lightyellow font-bodyFont text-p-3 mx-5 mb-2">
+                      {item[column]}
+                    </p>
+                  </TableCell>
               ))}
-              <button key={index} onClick={iconCollapseClick}>
-                {iconCollapse()}
-              </button>
+              <TableCell>
+                <button key={`${index+item}`} onClick={iconCollapseClick}>
+                  {iconCollapse()}
+                </button>
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>

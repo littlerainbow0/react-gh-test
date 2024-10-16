@@ -12,7 +12,7 @@ import './all.css'
 import AdminHome from './routes/admin/home.jsx'
 import AdminMembers from './routes/admin/members.jsx'
 import AdminTest from './routes/admin/test.jsx'
-// import AdminQAmail from './routes/admin/QAmail.jsx'
+import AdminQAmail from './routes/admin/QAmail.jsx'
 // import AdminTravel from './routes/admin/travel.jsx'
 // import AdminTravelTemplate from './routes/admin/travelTemplate.jsx'
 // -- admin pages /*
@@ -39,8 +39,8 @@ function App() {
       <Route path="/admin/home" element={<AdminHome />} exact />
       <Route path="/admin/members" element={<AdminMembers />} />
       <Route path="/admin/test" element={<AdminTest />} />
-      {/* <Route path="/admin/qna" element={<AdminQAmail />} />
-      <Route path="/admin/travel" element={<AdminTravel />} exact />
+      <Route path="/admin/qna" element={<AdminQAmail />} />
+      {/* <Route path="/admin/travel" element={<AdminTravel />} exact />
       <Route path="/admin/travletemplates" element={<AdminTravelTemplate />} /> */}
 
       {/* <Route path="/login" element={<Login />} exact />
