@@ -2,7 +2,7 @@
 
 // @import 'reset.scss';
 .order_hero {
-    background-image: url('/src/assets/images/train_exterior/train_exterior_8.png.png');
+    background-image: url('/src/assets/images/train_exterior/train_exterior_8.png');
 }
 
 .order {
@@ -24,6 +24,12 @@
         @extend %h5;
     }
 
+}
+
+.order_info{
+    border-radius: 25px;
+    background-color: rgba(255,255,255,.8);
+    padding: 24px;
 }
 
 .order_info_section {
@@ -49,13 +55,17 @@
             display: block;
             width: 150px;
             height: 50px;
-            background-color: $gray_200;
+            background-color: rgba(255,255,255,.8);
             text-decoration: none;
             color:$gray_800;
             line-height: 50px;
             border-radius: 35px;
             @extend %btn_lg;
+            &:hover{
+                border: 1px solid $gray_800;
+            }
         }
+
 
     }
 

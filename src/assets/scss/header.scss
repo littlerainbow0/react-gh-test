@@ -13,6 +13,10 @@ header {
 
 }
 
+html{
+    background-color: $main_200;
+}
+
 .header_logo {
     @apply m-auto pt-6;
     padding-top: 25px;

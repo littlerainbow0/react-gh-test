@@ -60,7 +60,8 @@ main {
     >div:first-of-type {
         p>span {
             @extend %h3;
-            background-color: $gray_200;
+            background-color: $secondary_800;
+            color: white;
             padding: 12px;
             margin-right: 144px;
         }
@@ -113,20 +114,21 @@ main {
 
 // 風景介紹
 .view_info,
-.jp_dessert_info {
+.dessert_info {
     width: 1024px;
     margin: auto;
 
-    >div:first-of-type {
-        background-color: $gray_200;
-        height: 56px;
+
+        
 
         h3 {
             @extend %h4;
             line-height: 32px;
             padding: 12px;
+            background-color: $main_400;
+        height: 56px;
         }
-    }
+
 
     .view_info_content {
         width: 1024px;
@@ -190,7 +192,7 @@ main {
 }
 
 // 餐點介紹
-.jp_dessert_info {
+.dessert_info {
     margin: 28px auto;
 
     >div {
