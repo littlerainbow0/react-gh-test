@@ -26,9 +26,9 @@ var cardBody = {
             tag: "input",
             subtitle: "帳號",
             inputType: "text",
-            value: "honey@gmail.com",
-            placeholderWords: "",
-            readOnly: true,
+            value: "",
+            placeholderWords: "honey@gmail.com",
+            readOnly: false,
         },
         {
             tag: "input",
@@ -40,7 +40,7 @@ var cardBody = {
         },
         {
             tag: "input",
-            subtitle: "密碼",
+            subtitle: "確認密碼",
             inputType: "password",
             value: "",
             placeholderWords: "請再次輸入密碼",
@@ -52,7 +52,10 @@ var cardBody = {
 const login = () => {
     return (
         <div className='main'>
-            <RadiusCard data={cardBody} />
+            <div className="fullscreen-background"></div>
+            <div className="content" id='card'>
+                <RadiusCard data={cardBody} />
+            </div>
         </div>
     )
 }

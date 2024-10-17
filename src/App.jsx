@@ -21,8 +21,8 @@ import AdminQAmail from './routes/admin/QAmail.jsx'
 import Login from './routes/user/login.jsx'
 import Signin from './routes/user/signin.jsx'
 import UserBias from './routes/user/userBias.jsx'
-// import UserOrders from './routes/user/userOrders.jsx'
-// import Contact from './routes/user/contact.jsx'
+import UserOrders from './routes/user/userOrders.jsx'
+import Contact from './routes/user/contact.jsx'
 import FAQ from './routes/user/FAQ.jsx'
 // -- user pages /*
 
@@ -47,8 +47,8 @@ function App() {
       <Route path="/signin" element={<Signin />} exact />
       {/* <Route path="/user/info" element={<Userinfo />} /> */}
       <Route path="/user/info/:userId" element={<UserBias />} />
-      {/* <Route path="/user/orders/:userid" element={<UserOrders />} />
-      <Route path="/contactus" element={<Contact />} /> */}
+      <Route path="/user/orders/:userid" element={<UserOrders />} />
+      <Route path="/contact" element={<Contact />} />
       <Route path="/questions" element={<FAQ />} exact />
     </Routes>
     </BrowserRouter>

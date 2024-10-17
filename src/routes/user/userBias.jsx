@@ -5,10 +5,9 @@ import './userBias.css'
 
 // */ Componenets
 import UserBiasNav from '../../components/user/userBiasNav.jsx'
+import Header from '../../components/user/header.jsx'
 import RadiusCard from '../../components/user/radiusCard.jsx'
 // -- Componenets /*
-
-var userBiasNavWords = ["管理帳戶", "檢視已預訂旅程"]
 
 // */ 假資料
 // const individualInformationColumns = ["userId", "name", "email", "phone", "birth", "sex"];
@@ -106,13 +105,16 @@ const UserBias = () => {
     return (
 
         <>
+            <Header />
             {userId ?
                 (
                     <div>
                         <div>
-                            <h1>Hello! userName</h1>
-                            <nav>
-                                <UserBiasNav data={userBiasNavWords} />
+                            <h3 className="font-titleFont text-h3 font-bold m-20">
+                                Hello! {cardBodyInfo.items[0].value}
+                            </h3>
+                            <nav className='m-10'>
+                                <UserBiasNav />
                             </nav>
                         </div>
                         <div id="mainbody">
