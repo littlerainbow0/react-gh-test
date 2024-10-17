@@ -61,7 +61,7 @@ const CustomTable = ({ columns, data }) => {
                   </TableCell>
               ))}
               <TableCell>
-                <button key={`${index+item}`} onClick={iconCollapseClick}>
+                <button key={index} onClick={iconCollapseClick}>
                   {iconCollapse()}
                 </button>
               </TableCell>

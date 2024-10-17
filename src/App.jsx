@@ -18,9 +18,9 @@ import AdminQAmail from './routes/admin/QAmail.jsx'
 // -- admin pages /*
 
 // */ user pages
-// import Login from './routes/user/login.jsx'
-// import Signin from './routes/user/signin.jsx'
-// import Userinfo from './routes/user/userInfo.jsx'
+import Login from './routes/user/login.jsx'
+import Signin from './routes/user/signin.jsx'
+import UserBias from './routes/user/userBias.jsx'
 // import UserOrders from './routes/user/userOrders.jsx'
 // import Contact from './routes/user/contact.jsx'
 import FAQ from './routes/user/FAQ.jsx'
@@ -43,11 +43,11 @@ function App() {
       {/* <Route path="/admin/travel" element={<AdminTravel />} exact />
       <Route path="/admin/travletemplates" element={<AdminTravelTemplate />} /> */}
 
-      {/* <Route path="/login" element={<Login />} exact />
+      <Route path="/login" element={<Login />} exact />
       <Route path="/signin" element={<Signin />} exact />
-      <Route path="/user/info" element={<Userinfo />} />
-      <Route path="/user/info/:userid" element={<Userinfo />} />
-      <Route path="/user/orders/:userid" element={<UserOrders />} />
+      {/* <Route path="/user/info" element={<Userinfo />} /> */}
+      <Route path="/user/info/:userId" element={<UserBias />} />
+      {/* <Route path="/user/orders/:userid" element={<UserOrders />} />
       <Route path="/contactus" element={<Contact />} /> */}
       <Route path="/questions" element={<FAQ />} exact />
     </Routes>

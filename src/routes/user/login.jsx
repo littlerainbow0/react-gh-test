@@ -1,8 +1,10 @@
 // components/home.jsx
 import React from 'react';
-import Navbar from '../../components/admin/navbar.jsx';
-import { DropdownItem, DropdownTrigger, Dropdown, DropdownMenu } from "@nextui-org/react";
-import CustomTable from '../../components/admin/costomTable.jsx'; // 確保導入的是正確的路徑
+import './login.css';
+
+// */ Componenets
+import RadiusCard from '../../components/user/radiusCard.jsx'
+// -- Componenets /*
 
 const columns = [
     "userId",
@@ -11,25 +13,48 @@ const columns = [
 ];
 const data = [
     {
-        userId:1,
-        email:"onoyi17@gmail.com",
-        passwords:"00000000"
+        userId: 1,
+        email: "onoyi17@gmail.com",
+        passwords: "00000000"
     },
 ];
 
-const AdminMember = () => {
+var cardBody = {
+    title: "會員登入",
+    items: [
+        {
+            tag: "input",
+            subtitle: "帳號",
+            inputType: "text",
+            value: "honey@gmail.com",
+            placeholderWords: "",
+            readOnly: true,
+        },
+        {
+            tag: "input",
+            subtitle: "密碼",
+            inputType: "password",
+            value: "",
+            placeholderWords: "請輸入密碼",
+            readOnly: false,
+        },
+        {
+            tag: "input",
+            subtitle: "密碼",
+            inputType: "password",
+            value: "",
+            placeholderWords: "請再次輸入密碼",
+            readOnly: false,
+        },
+    ],
+}
+
+const login = () => {
     return (
-        <div className="flex flex-row">
-            <Navbar />
-            <div className='flex-col ml-10'>
-                <h1>admin/home</h1>
-                <CustomTable columns={columns} data={data} />
-                <CustomTable columns={individualInformationColumns} data={individualInformationData}></CustomTable>
-                <CustomTable columns={historyOrdersColumns} data={historyOrdersData}></CustomTable>
-            </div>
-
+        <div className='main'>
+            <RadiusCard data={cardBody} />
         </div>
-    );
-};
+    )
+}
 
-export default AdminMember;
+export default login;

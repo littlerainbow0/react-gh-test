@@ -1,0 +1,21 @@
+#main>div {
+    overflow-y: auto;
+}
+
+#main>div>div {
+    margin: auto;
+    width: 18rem;
+    height: auto;
+    background-color: #F4F4F4;
+    border-radius: 0 1rem 0 1rem;
+    padding: 2.5rem;
+}
+
+#main>div>div>div {
+    text-align: center;
+    margin: 0 0 2.5rem 0;
+}
+
+p {
+    text-align: center;
+}
