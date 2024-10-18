@@ -38,6 +38,7 @@ const HomeHeader=()=>{
     
             {/* Navigation menu */}
             <div id="navMenu" className="absolute z-10 hidden p-3 text-white bg-black top-12 left-5 bg-opacity-90">
+                <a href="/news" className="block mb-2">最新消息</a>
                 <a href="/about" className="block mb-2">概念</a>
                 <a href="/menu" className="block mb-2">饗宴</a>
                 <a href="#" className="block mb-2">設施</a>

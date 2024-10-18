@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Noto Serif TC'; /* 與 tailwind.config.js 中定義的字體名稱一致 */
+  src: url('../fonts/NotoSerifTC-VariableFont_wght.ttf') format('truetype'); /* 這裡的路徑根據你的項目結構調整 */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto Sans TC'; /* 與 tailwind.config.js 中定義的字體名稱一致 */
+  src: url('../fonts/NotoSansTC-VariableFont_wght.ttf') format('truetype'); /* 這裡的路徑根據你的項目結構調整 */
+  font-weight: normal;
+  font-style: normal;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;

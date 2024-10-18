@@ -19,14 +19,7 @@ import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 const App=()=>{
   return(
     <Router>
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/news">News</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/menu">Menu</a></li>
-        </ul>
-      </nav>
+      
 
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
