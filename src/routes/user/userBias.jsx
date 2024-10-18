@@ -110,12 +110,8 @@ const UserBias = () => {
                 (
                     <div>
                         <div>
-                            <h3 className="font-titleFont text-h3 font-bold m-20">
-                                Hello! {cardBodyInfo.items[0].value}
-                            </h3>
-                            <nav className='m-10'>
-                                <UserBiasNav />
-                            </nav>
+                            <UserBiasNav />
+
                         </div>
                         <div id="mainbody">
                             <RadiusCard data={cardBodyPwd} />

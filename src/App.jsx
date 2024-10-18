@@ -5,28 +5,27 @@ import React from 'react';
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import './assets/css/style.css'
-import './all.css'
+// import './assets/css/style.css'
+// import './all.css'
 
 // React
 import { motion } from "framer-motion"
 
 // */ admin pages
-import AdminHome from './routes/admin/home.jsx'
-import AdminMembers from './routes/admin/members.jsx'
-import AdminTest from './routes/admin/test.jsx'
-import AdminQAmail from './routes/admin/QAmail.jsx'
-// import AdminTravel from './routes/admin/travel.jsx'
-// import AdminTravelTemplate from './routes/admin/travelTemplate.jsx'
+import AdminHome     from './routes/admin/home.jsx'
+import AdminMembers  from './routes/admin/members.jsx'
+import AdminQAmail   from './routes/admin/QAmail.jsx'
+import Schedule      from './routes/admin/schedule.jsx'
+import AdminTemplate from './routes/admin/template.jsx'
 // -- admin pages /*
 
 // */ user pages
-import Login from './routes/user/login.jsx'
-import Signin from './routes/user/signin.jsx'
-import UserBias from './routes/user/userBias.jsx'
+import Login      from './routes/user/login.jsx'
+import Signin     from './routes/user/signin.jsx'
+import UserBias   from './routes/user/userBias.jsx'
 import UserOrders from './routes/user/userOrders.jsx'
-import Contact from './routes/user/contact.jsx'
-import FAQ from './routes/user/FAQ.jsx'
+import Contact    from './routes/user/contact.jsx'
+import FAQ        from './routes/user/FAQ.jsx'
 // -- user pages /*
 
 
@@ -41,10 +40,9 @@ function App() {
     <Routes>
       <Route path="/admin/home" element={<AdminHome />} exact />
       <Route path="/admin/members" element={<AdminMembers />} />
-      <Route path="/admin/test" element={<AdminTest />} />
-      <Route path="/admin/qna" element={<AdminQAmail />} />
-      {/* <Route path="/admin/travel" element={<AdminTravel />} exact />
-      <Route path="/admin/travletemplates" element={<AdminTravelTemplate />} /> */}
+      <Route path="/admin/question" element={<AdminQAmail />} />
+      <Route path="/admin/schedule" element={<Schedule />} exact />
+      <Route path="/admin/template" element={<AdminTemplate />} />
 
       <Route path="/login" element={<Login />} exact />
       <Route path="/signin" element={<Signin />} exact />
@@ -52,7 +50,7 @@ function App() {
       <Route path="/user/info/:userId" element={<UserBias />} />
       <Route path="/user/orders/:userid" element={<UserOrders />} />
       <Route path="/contact" element={<Contact />} />
-      <Route path="/questions" element={<FAQ />} exact />
+      <Route path="/question" element={<FAQ />} exact />
     </Routes>
     </BrowserRouter>
   )

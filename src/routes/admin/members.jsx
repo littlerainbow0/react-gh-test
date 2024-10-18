@@ -4,6 +4,7 @@ import { DropdownItem, DropdownTrigger, Dropdown, DropdownMenu } from "@nextui-o
 import Navbar from '../../components/admin/navbar.jsx';
 import CustomTable from '../../components/admin/customTable.jsx'; // 確保導入的是正確的路徑
 import CustomTableCollapse from '../../components/admin/customTable_collapse.jsx'; // 確保導入的是正確的路徑
+import RouteName from '../../components/admin/routeName.jsx'
 
 var columns = ["userId", "level", "numberOfRides", "abandonedOrders", "registrationTime", "latestLogin"];
 const data = [
@@ -58,14 +59,13 @@ const AdminMember = () => {
     return (
         <div className="flex flex-row">
             <Navbar />
-            <div className='flex-col ml-10'>
-                <h1>會員管理</h1>
+            <div className='ml-10 text-left w-full'>
+                <RouteName />
                 <CustomTableCollapse columns={columns} data={data} />
                 <CustomTable columns={individualInformationColumns} data={individualInformationData}></CustomTable>
                 <CustomTable columns={historyOrdersColumns} data={historyOrdersData}></CustomTable>
             </div>
-
-        </div>
+        </div >
     );
 };
 

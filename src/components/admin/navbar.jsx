@@ -67,7 +67,7 @@ const navText = [
 // 側邊欄內容
 const Sidebar = () => {
   return (
-    <div className="flex-col justify-center w-64 p-5 h-screen bg-dark overflow-y-auto text-clip ">
+    <div className="flex-col justify-center w-64 p-5 h-screen bg-dark overflow-y-auto text-clip min-w-[170px]">
       <Link href="#">
         <div className="mb-10 p-5">
           <Logo color="rgb(255,245,245)"></Logo>

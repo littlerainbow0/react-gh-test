@@ -1,7 +1,24 @@
 // components/home.jsx
 import React from 'react';
 import Navbar from '../../components/admin/navbar.jsx';
-import CustomTable from '../../components/admin/costomTable.jsx'; // 確保導入的是正確的路徑
+import CustomTable from '../../components/admin/customTable.jsx'; // 確保導入的是正確的路徑
+import RouteName from '../../components/admin/routeName.jsx'
+import FilterCard from '../../components/admin/card_filter.jsx'
+
+const filterCardName = [
+    {
+        dessertType:"歐式",
+        imgSrc:"../../assets/images/dessert_lemoncake.png",
+    },
+    {
+        dessertType:"日式",
+        imgSrc:"../../assets/images/dessert_lemoncake.png",
+    },
+    {
+        dessertType:"台式",
+        imgSrc:"../../assets/images/dessert_lemoncake.png",
+    },
+]
 
 const columns = [
     "templateId",
@@ -78,8 +95,11 @@ const AdminHome = () => {
     return (
         <div className="flex flex-row">
             <Navbar />
-            <h1>Admin Home</h1>
+            <div className='ml-10 text-left w-full'>
+            <RouteName/>
+            <FilterCard data={filterCardName} />
             <CustomTable columns={columns} data={data} />
+            </div>
         </div>
     );
 };

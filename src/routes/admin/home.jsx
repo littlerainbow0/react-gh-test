@@ -2,6 +2,7 @@
 import React from 'react';
 import Navbar from '../../components/admin/navbar.jsx';
 import CustomTable from '../../components/admin/customTable.jsx'; // 確保導入的是正確的路徑
+import RouteName from '../../components/admin/routeName.jsx'
 
 const columns = ["Name", "Age", "Email","hi"];
 const data = [
@@ -13,8 +14,10 @@ const AdminHome = () => {
     return (
         <div className="flex flex-row">
             <Navbar />
-            <h1>Admin Home</h1>
+            <div className='ml-10 text-left w-full'>
+            <RouteName/>
             <CustomTable columns={columns} data={data} />
+            </div>
         </div>
     );
 };

@@ -41,7 +41,7 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../../assets/images/train_exterior/tripInfo_GrassSm01.png'); /* 替換為你的背景圖片URL */
+    background-image: url('../../assets/images/train_exterior/tripInfo_GrassLg01.png'); /* 替換為你的背景圖片URL */
     background-size: cover; /* 使圖片填滿 */
     background-position: center; /* 置中 */
     z-index: -1; 

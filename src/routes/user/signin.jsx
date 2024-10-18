@@ -101,7 +101,7 @@ const signin = () => (
             <BsArrowDownCircleFill />
         </div>
         <RadiusCard data={cardBodyInfo} />
-        <div className="fullscreen-background"></div>
+        <div className="full-background"></div>
     </div>
 )
 

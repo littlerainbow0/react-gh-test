@@ -1,14 +1,16 @@
 // components/home.jsx
 import React from 'react';
 import Navbar from '../../components/admin/navbar.jsx';
-import CustomTable from '../../components/admin/costomTable.jsx'; // 確保導入的是正確的路徑
+import CustomTable from '../../components/admin/customTable.jsx'; // 確保導入的是正確的路徑
+import RouteName from '../../components/admin/routeName.jsx'
+
 
 const columns = [
-    "travelId", 
-    "date", 
-    "departureTime", 
-    "routeName", 
-    "templateTitle", 
+    "travelId",
+    "date",
+    "departureTime",
+    "routeName",
+    "templateTitle",
     "status"];
 const data = [
     {
@@ -31,12 +33,12 @@ const templateDetailColumns = [
 ];
 const templateDetailData = [
     {
-        templateId:1,
-        templateTitle:"日式甜點",
-        routeName:"台中高雄",
-        themeName:"日式",
-        menuName1:"日式練切",
-        menuName2:"日式團子",
+        templateId: 1,
+        templateTitle: "日式甜點",
+        routeName: "台中高雄",
+        themeName: "日式",
+        menuName1: "日式練切",
+        menuName2: "日式團子",
     }
 ];
 
@@ -44,8 +46,11 @@ const AdminHome = () => {
     return (
         <div className="flex flex-row">
             <Navbar />
-            <h1>Admin Home</h1>
-            <CustomTable columns={columns} data={data} />
+            <div className='ml-10 text-left w-full'>
+                <RouteName />
+                <CustomTable columns={columns} data={data} />
+                <FilterCard />
+            </div>
         </div>
     );
 };

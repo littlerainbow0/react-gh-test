@@ -3,6 +3,7 @@ import React from 'react';
 import Navbar from '../../components/admin/navbar.jsx';
 import CustomTable from '../../components/admin/customTable.jsx'; // 確保導入的是正確的路徑
 import MailCard from '../../components/admin/card_text.jsx';
+import RouteName from '../../components/admin/routeName.jsx'
 
 const columns = ["userId", "name", "email", "type", "content", "time", "reply"];
 const data = [
@@ -23,9 +24,9 @@ const AdminHome = () => {
   return (
     <div className="flex flex-row">
       <Navbar />
-      <div className='flex-col ml-10'>
-        <h1>Admin Home</h1>
-        <div className='flex flex-row'>
+      <div className='flex-col ml-10 text-left w-full'>
+        <RouteName />
+        <div className='flex flex-row justify-center flex-wrap'>
           <MailCard columns={columns} data={data} />
           <MailCard columns={columns} data={data} />
           <MailCard columns={columns} data={data} />

@@ -69,10 +69,12 @@ var cardBody = {
 const Contact = () => {
   return (
     <div>
-      <UserBiasNav />
-      <div className="flex flex-row">
-        <RadiusCard data={cardBody} />
-        <BtnContact />
+      <div className='w-full'>
+        <UserBiasNav />
+      </div>
+      <div className="flex flex-row py-20 justify-center">
+        <RadiusCard data={cardBody} id="" />
+      <BtnContact />
       </div>
     </div>
   )

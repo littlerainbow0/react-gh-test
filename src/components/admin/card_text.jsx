@@ -33,7 +33,7 @@ export default function App({ columns, data }) {
     return (
         <div>
             {data.map((elem, index) => (
-                <Card key={elem.userId} className="max-w-[340px] mx-1 rounded-lg">
+                <Card key={elem.userId} className="my-5 max-w-[340px] mx-1 rounded-lg">
                     <CardHeader className="justify-between bg-darkbrown">
                         <div className="flex gap-5">
                             <div className="flex flex-col gap-1 items-start justify-center  text-p-2 mx-2 text-lightyellow py-2">

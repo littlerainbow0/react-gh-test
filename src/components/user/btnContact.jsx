@@ -1,4 +1,5 @@
 import { div } from "framer-motion/client"
+import { BsChevronDoubleRight } from "react-icons/bs";
 
 const data = [
     {
@@ -21,17 +22,22 @@ const data = [
 
 export default function BtnContact() {
     return (
-        <div>
+        <div className="ml-24">
             {data.map((elem, index) => (
-                <div>
-                    <button>
-                        <h3 className="font-titleFont text-p-1 font-bold">
-                            {elem.title}
-                        </h3>
-                        <span className="font-titleFont text-p-2 font-semibold">
-                            {elem.text}
-                            </span>
-                    </button>
+                <div key={index}>
+                    <div className="flex items-end pb-1 justify-between">
+                        <div>
+                            <button className="pl-5 pt-14 text-left">
+                                <h3 className="font-titleFont text-p-1 font-bold pb-8 text-dark">
+                                    {elem.title}
+                                </h3>
+                                <span className="font-titleFont text-p-2 font-semibold text-brown">
+                                    {elem.text}
+                                </span>
+                            </button>
+                        </div>
+                        <BsChevronDoubleRight className="mb-0.5" color="rgb(138,110,110)" />
+                    </div>
                     <hr />
                 </div >
             ))}
