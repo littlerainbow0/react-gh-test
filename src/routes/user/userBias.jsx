@@ -105,7 +105,7 @@ const UserBias = () => {
     return (
 
         <>
-            <Header />
+            {/* <Header /> */}
             {userId ?
                 (
                     <div>

@@ -5,7 +5,8 @@ import { div } from "framer-motion/m";
 export default function App({ columns, data }) {
 
     var typeIcon = function (elem) {
-        switch (elem.type) {
+
+        switch (elem) {
             case "訂單/取消":
                 return "🎫";
                 break;
@@ -23,6 +24,7 @@ export default function App({ columns, data }) {
                 break;
 
             default:
+                return "***";
                 break;
         }
     };
@@ -31,21 +33,20 @@ export default function App({ columns, data }) {
     return (
         <div>
             {data.map((elem, index) => (
-                <Card key={elem.userId} className="max-w-[340px]">
-                    <CardHeader className="justify-between">
+                <Card key={elem.userId} className="max-w-[340px] mx-1 rounded-lg">
+                    <CardHeader className="justify-between bg-darkbrown">
                         <div className="flex gap-5">
-                            <Avatar isBordered radius="full" size="md" src="https://nextui.org/avatars/avatar-1.png" />
-                            <div className="flex flex-col gap-1 items-start justify-center">
-                                <h4 className="text-small font-semibold leading-none text-default-600">
+                            <div className="flex flex-col gap-1 items-start justify-center  text-p-2 mx-2 text-lightyellow py-2">
+                                <h4 className="text-small font-semibold leading-none">
                                     {elem.name}
                                 </h4>
-                                <h5 className="text-small tracking-tight text-default-400">
+                                <span className="text-small tracking-tight text-lightyellow">
                                     {elem.email}
-                                </h5>
+                                </span>
                             </div>
                         </div>
                         <Button
-                            className={elem.reply ? "bg-transparent text-foreground border-default-200" : ""}
+                            className={elem.reply === "Y" ? "font-bodyFont text-xs py-1 text-lightbrown border-2 border-lightbrown" : "text-brown"}
                             color="primary"
                             radius="full"
                             size="sm"
@@ -58,34 +59,21 @@ export default function App({ columns, data }) {
                             {elem.reply === "N" ? "Reply" : "Replied"}
                         </Button>
                     </CardHeader>
-                    <CardBody className="px-3 py-0 text-small text-default-400">
+                    <CardBody className="px-3 py-0 font-bodyFont text-p-1 bg-lightbrown text-dark">
                         <p>
                             {elem.content}
                         </p>
                         <span className="pt-2">
                             #{elem.type}
                             <span className="py-2" aria-label="computer" role="img">
-                                {typeIcon()}
+                                {typeIcon(elem.type)}
                             </span>
                         </span>
                     </CardBody>
-                    <CardFooter className="gap-3">
-                        <div className="flex gap-1">
-                            <p className="font-semibold text-default-400 text-small">
-                                4
-                            </p>
-                            <p className=" text-default-400 text-small">
-                                {elem.time}
-                            </p>
-                        </div>
-                        <div className="flex gap-1">
-                            <p className="font-semibold text-default-400 text-small">
-                                97.1K
-                            </p>
-                            <p className="text-default-400 text-small">
-                                {elem.reply}
-                            </p>
-                        </div>
+                    <CardFooter className="gap-3 bg-darkbrown flex justify-end">
+                        <p className=" text-p-3 text-brown">
+                            {elem.time}
+                        </p>
                     </CardFooter>
                 </Card>
             ))}

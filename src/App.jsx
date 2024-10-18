@@ -8,6 +8,9 @@ import './App.css'
 import './assets/css/style.css'
 import './all.css'
 
+// React
+import { motion } from "framer-motion"
+
 // */ admin pages
 import AdminHome from './routes/admin/home.jsx'
 import AdminMembers from './routes/admin/members.jsx'

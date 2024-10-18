@@ -1,4 +1,4 @@
-import { div } from "framer-motion/client";
+import { Button } from "@nextui-org/react";
 
 export default function RadiusCard({ data }) {
     return (
@@ -6,19 +6,19 @@ export default function RadiusCard({ data }) {
             <div id="title">
                 <div id="mainbody">
                     <h3
-                        className="text-h5 font-titleFont font-bold"
+                        className="text-h5 font-titleFont font-bold "
                     >{data.title}</h3>
                 </div>
                 {data.items.map((cardElem, cardIndex) => (
                     <div key={cardIndex} className="my-3 text-left">
-                        <label htmlFor={`${cardElem+cardIndex}`}
+                        <label htmlFor={`${cardElem + cardIndex}`}
                             className="text-p-2 font-titleFont font-semibold text-darkbrown">
                             {cardElem.subtitle}
                         </label>
                         <br />
                         {cardElem.tag === "input" ? (
                             <input
-                            id={`${cardElem+cardIndex}`}
+                                id={`${cardElem + cardIndex}`}
                                 type={cardElem.inputType}
                                 defaultValue={cardElem.value}
                                 placeholder={cardElem.placeholderWords}
@@ -45,18 +45,25 @@ export default function RadiusCard({ data }) {
                             ))
                         ) : cardElem.tag === "select" ? (
                             <select name="" id="ontactClass"
-                            className="font-bodyFont text-p-3 my-1">
+                                className="font-bodyFont text-p-3 my-1">
                                 {cardElem.options.map((elem, index) => (
                                     <option key={index} value={index}>
                                         {elem}
-                                        </option>
+                                    </option>
                                 ))}
                             </select>
                         ) : null}
                         <hr />
                     </div>
                 ))}
+                <Button className="bg-lightyellow text-brown">
+                    {data.title === "註冊會員" ? ("")
+                    :( data.title === "會員登入" ? ("登入")
+                    :( data.title === "建立個人資訊"? ("加入會員")
+                    :( data.title === "修改密碼" || data.title === "基本資料"? 
+                    ("儲存資料"):null)))}
+                </Button>
             </div>
-        </div>
+        </div >
     )
 }

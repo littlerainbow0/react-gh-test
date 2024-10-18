@@ -29,10 +29,6 @@ nav ul{
 }
 
 #mainbody>div>div>div {
-    text-align: center;
+    /* text-align: center; */
     margin: 0 0 1rem 0;
-}
-
-p {
-    text-align: center;
 }
