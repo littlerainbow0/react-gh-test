@@ -81,6 +81,7 @@ export default {
       },
     },
   },
+  darkMode: "class",
   plugins: [
     function ({ addUtilities }) {
       const newUtilities = {
@@ -97,5 +98,6 @@ export default {
       // 添加自定義工具類，並支持響應式和 hover 狀態
       addUtilities(newUtilities, ['responsive', 'hover']);
     },
+    nextui(),
   ],
 }

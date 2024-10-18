@@ -18,11 +18,12 @@ import {
   Pagination,
   button,
 } from "@nextui-org/react";
-import { capitalize } from "./utils";
-import { div } from "framer-motion/client";
 
+// */ icon
 import { BsCaretDown } from "react-icons/bs";
 import { BsCaretUpFill } from "react-icons/bs";
+import { BsFilter } from "react-icons/bs";
+// -- icon /*
 
 
 const CustomTable = ({ columns, data }) => {
@@ -37,6 +38,11 @@ const CustomTable = ({ columns, data }) => {
   };
   return (
     <div className="my-5" style={{ width: '100%' }}>
+      <Button radius='full' className='font-bodyFont text-p-1 font-bold mb-1
+      border-2 border-dark hover:bg-lightbrown hover:border-brown hover:text-lightyellow'>
+        排序
+        <BsFilter />
+      </Button>
       <Table className="bg-dark text-center" style={{ width: '100%' }}>
         <TableHeader className="flex-col">
           {columns.map((column) => (

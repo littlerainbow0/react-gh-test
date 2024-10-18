@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '../../components/admin/navbar.jsx';
-import CustomTableCol from '../../components/admin/customTable_1Col.jsx'; // 確保導入的是正確的路徑
+import CustomTableCol from '../../components/user/customTable_1Col.jsx'; // 確保導入的是正確的路徑
 
 const data = [
     {

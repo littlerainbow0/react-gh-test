@@ -2,21 +2,24 @@
 import React from 'react';
 import Navbar from '../../components/admin/navbar.jsx';
 import CustomTable from '../../components/admin/customTable.jsx'; // 確保導入的是正確的路徑
+import CustomTableCollapse from '../../components/admin/customTable_collapse.jsx'; // 確保導入的是正確的路徑
 import RouteName from '../../components/admin/routeName.jsx'
 import FilterCard from '../../components/admin/card_filter.jsx'
+import Modal from '../../components/admin/modal.jsx'
+
 
 const filterCardName = [
     {
         dessertType:"歐式",
-        imgSrc:"../../assets/images/dessert_lemoncake.png",
+        imgSrc:"/src/assets/images/dessert/tripInfo_Eur04.png",
     },
     {
         dessertType:"日式",
-        imgSrc:"../../assets/images/dessert_lemoncake.png",
+        imgSrc:"/src/assets/images/dessert/dessert_dessert09.png",
     },
     {
         dessertType:"台式",
-        imgSrc:"../../assets/images/dessert_lemoncake.png",
+        imgSrc:"/src/assets/images/dessert/trip_Tw.png",
     },
 ]
 
@@ -34,7 +37,23 @@ const data = [
         themeName: "日式",
         // 日式甜點, 台式甜點, 歐式甜點
         themeImg: ".png",
-    }
+    },
+    {
+        templateId: 1,
+        templateTitle : "日式甜點",
+        routeName: "台中高雄",
+        themeName: "日式",
+        // 日式甜點, 台式甜點, 歐式甜點
+        themeImg: ".png",
+    },
+    {
+        templateId: 1,
+        templateTitle : "日式甜點",
+        routeName: "台中高雄",
+        themeName: "日式",
+        // 日式甜點, 台式甜點, 歐式甜點
+        themeImg: ".png",
+    },
 ];
 const detailColumns = [
     "templateId",
@@ -43,10 +62,6 @@ const detailColumns = [
     "menuContent1",
     "menuName2",
     "menuContent2",
-    "activityName1",
-    "activityName2",
-    "activityName3",
-    "activityName4",
 ]
 const detailData = [
     {
@@ -56,10 +71,6 @@ const detailData = [
     menuContent1:"煎茶、柚香練切、星空羊羹",
     menuName2:"日式團子",
     menuContent2:"焙茶、醬油團子、櫻餅、蕨餅",
-    activityName1:"Y",
-    activityName2:"N",
-    activityName3:"Y",
-    activityName4:"N"
     }
 ];
 const modalColumns = [
@@ -98,7 +109,9 @@ const AdminHome = () => {
             <div className='ml-10 text-left w-full'>
             <RouteName/>
             <FilterCard data={filterCardName} />
-            <CustomTable columns={columns} data={data} />
+            {/* <CustomTableCollapse columns={columns} data={data} /> */}
+            <CustomTable columns={detailColumns} data={detailData} />
+            <Modal/>
             </div>
         </div>
     );
